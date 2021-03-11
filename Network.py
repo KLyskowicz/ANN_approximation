@@ -89,10 +89,10 @@ class Network(object):
             self.print_error_plot(path, name)
 
     def print_error_plot(self, path, name):
-        plt.plot(self.error_X, self.error_Y)
-        plt.xlabel('x')
-        plt.ylabel('y')
+        plt.xlabel('epoches')
+        plt.ylabel('error')
         plt.title('Error plot')
+        plt.plot(self.error_X, self.error_Y)
         plt.savefig(os.path.join(path, name))
         plt.close()
 
